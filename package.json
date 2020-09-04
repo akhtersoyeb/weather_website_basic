@@ -1,0 +1,14 @@
+{
+  "name": "weather_news",
+  "version": "1.0.0",
+  "description": "A simple weather web app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "sk soyeb akhter",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
