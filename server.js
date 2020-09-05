@@ -17,3 +17,15 @@ app.get('/weather', async (request, response) => {
     const json = await fetch_response.json();
     response.json(json);
 });
+
+app.get('/highAccuracyWeather/:latlon', async (request, response) => {
+
+    latlon = request.params.latlon.split(',');
+    lat = latlon[0];
+    lon = latlon[1];
+    const api_url = `http://api.weatherstack.com/current?access_key=${api_key}&query=${lat},${lon}`;
+    const fetch_response = await fetch(api_url);
+    const json = await fetch_response.json();
+    response.json(json);
+
+})
