@@ -13,8 +13,8 @@ highAccuracyBtn.addEventListener('click', () => {
             let data = await response.json();
             // console.log(data);
 
-            let temperature = data.main.temp;
-            let weather_icon = data.weather['0'].icon;
+            let temperature = data.main.temp - 273.15;
+            let weather_icon = data.weather['0'].icon; //http://openweathermap.org/img/wn/{weather code}@2x.png
             let weather_description = data.weather['0'].description;
             let location_name = data.name;
 
