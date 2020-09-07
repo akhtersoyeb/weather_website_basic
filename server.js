@@ -12,8 +12,7 @@ app.listen(port, () => {
 
 const api_key_weather_stack = process.env.WEATHER_STACK_API_KEY;
 const api_key_open_weather_map = process.env.OPENMAP_API_KEY;
-console.log(api_key_open_weather_map);
-console.log(api_key_weather_stack);
+
 
 app.get('/weather', async (request, response) => {
     const api_url = `http://api.weatherstack.com/current?access_key=${api_key_weather_stack}&query=fetch:ip`;
